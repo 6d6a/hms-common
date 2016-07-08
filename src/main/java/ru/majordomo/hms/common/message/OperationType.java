@@ -5,5 +5,6 @@ package ru.majordomo.hms.common.message;
  */
 enum OperationType {
     AccountCreate,
-    AccountDelete
+    AccountDelete,
+    AccountUpdate
 }
