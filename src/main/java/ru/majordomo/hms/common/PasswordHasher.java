@@ -19,4 +19,14 @@ public class PasswordHasher {
 
         return hash;
     }
+
+    public static String hashForUnix(String plainPassword) {
+        String hash;
+        Charset charset = Charset.forName("UTF-8");
+        HashFunction sha512HashFunction = Hashing.sha512();
+
+        hash = sha512HashFunction.hashString(plainPassword, charset).toString();
+
+        return hash;
+    }
 }
